@@ -1,0 +1,55 @@
+[{
+  "actor": "tom",
+  "track": "audio/danger.mp3",
+  "trivia": [
+      {
+      "question":"What movie was Tom Cruise a pilot in?",
+      "answer": "Top Gun",
+      "imgUrl": "img/top_gun.png"
+      },
+      {
+        "question": "What movie was Tom Cruise a Race Car Drive in?",
+        "answer": "Days of Thunder",
+        "imgUrl": "img/thunder.png"
+      },
+      {
+        "question": "What movie was Tom Cruise a Vampire in?",
+        "answer": "Interview With the Vampire",
+        "imgUrl": "img/tclestat.png"
+      },
+      {
+        "question": "What movie was Tom Cruise a Samurai in?",
+        "answer": "The Last Samurai",
+        "imgUrl": "img/samurai.png"
+      },
+      {
+        "question": "What movie was Tom Cruise a Bartender in?",
+        "answer": "Cocktail",
+        "imgUrl": "img/cocktail.png"
+      },
+      {
+        "question": "What Tom Cruise movie is the line 'you can't handle the truth'?",
+        "answer": "A Few Good Men",
+        "imgUrl": "img/few_good_men.png"
+      },
+      {
+        "question": "What movie did Tom Cruise play a high school football player?",
+        "answer": "Risky Business",
+        "imgUrl": "img/risky.png"
+      },
+      {
+        "question": "What movie did Tom Cruise play a Sports Agent?",
+        "answer": "Jerry Macguire",
+        "imgUrl": "img/jerry.png"
+      },
+      {
+        "question": "What movie did Tom Cruise play a Greaser?",
+        "answer": "The Outsiders",
+        "imgUrl": "img/outsiders.png"
+      }
+     ]
+},
+{
+  "actor": "brad"
+}
+]

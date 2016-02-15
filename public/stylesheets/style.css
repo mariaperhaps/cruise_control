@@ -1,0 +1,190 @@
+body, html{
+  background-color: yellow;
+  font-size: 100%;
+  height: 100%;
+}
+
+
+@font-face{
+  font-family: MyGirlIsRetro;
+  src: url(../fonts/MyGirlIsRetroDEMO.ttf);
+}
+
+.game{
+  width: 60%;
+  margin: 0 auto;
+}
+
+
+.container{
+  text-align: center;
+}
+
+.container h1, .win-lose{
+  font-size: 10em;
+  font-family: MyGirlIsRetro;
+  color: turquoise;
+  letter-spacing: 5px;
+}
+
+p{
+  font-family: Lato;
+  margin: 10%;
+  color: white;
+  font-size: 14px;
+}
+
+.title{
+  padding-top: 50px;
+}
+
+.play{
+  background-color: rgb(255, 0, 174);
+  height: 100%;
+  width: 100%;
+  border: 0;
+  font-size: 3em;
+  color: turquoise;
+}
+
+.button-container{
+  height: 140px;
+  background: red;
+  text-align: center;
+  border: 20px dotted turquoise;
+}
+
+
+
+.square{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 10px;
+  background: red;
+  vertical-align:top;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.answer-button, input{
+  position: absolute;
+}
+
+.square input{
+  width: 80%;
+  top: 50%;
+  left: 10%;
+  background: inherit;
+  border: 2px solid yellow;
+  border-radius: 5px;
+}
+
+.timer{
+  font-size: .5em;
+}
+
+.answer-button{
+  top: 70%;
+  left: 33%;
+  background-color: turquoise;
+  color: yellow;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.overlay{
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(51,51,51,0.8);
+  z-index: 10;
+}
+
+.win-lose-container{
+  position: relative;
+}
+
+.win-lose{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  text-align: center;
+}
+
+#sad-tom{
+  background-image: url("http://i.ytimg.com/vi/YMnIjUQhCCM/maxresdefault.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+
+@media(max-width: 1365px){
+  .container h1{
+    font-size: 9em;
+  }
+  .play{
+    font-size: 2em;
+  }
+  .square{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media(max-width: 1260px){
+  .container h1{
+    font-size: 9em;
+  }
+  .play{
+    font-size: 2em;
+  }
+}
+
+@media(max-width: 768px){
+  .container h1{
+    font-size: 8em;
+  }
+  .square{
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media(max-width: 600px){
+  .container h1{
+    font-size: 6em;
+  }
+  .square{
+    width: 130px;
+    height: 130px;
+  }
+}
+
+@media(max-width: 400px){
+  .container h1{
+    font-size: 4em;
+  }
+  input.answer-input{
+    top: 35%;
+  }
+  .square{
+    width: 100px;
+    height: 100px;
+  }
+  p{
+    font-size: 9px;
+  }
+  .answer-button{
+    left: 16%;
+    top: 65%;
+  }
+}
+
