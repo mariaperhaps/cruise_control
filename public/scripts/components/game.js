@@ -1,6 +1,9 @@
 import React from 'react';
-import Square from './square.js'
-import Timer from './timer.js'
+import Square from './square.js';
+import Timer from './timer.js';
+import Overlay from './overlay.js';
+import Sound from './sound.js';
+const ReactDOM = require('react-dom');
 
 class Game extends React.Component{
   constructor(props) {
@@ -9,7 +12,8 @@ class Game extends React.Component{
       trivia: [],
       actor: "tom",
       track: "",
-      score: 0
+      score: 0,
+      win: "lose"
     };
     this.updateScore = this.updateScore.bind(this);
     this.endGame = this.endGame.bind(this);
@@ -34,13 +38,15 @@ class Game extends React.Component{
     this.setState({score: newScore})
   }
   endGame(){
-      $('.overlay').show();
-      $('.win-lose-container').show();
+    let end = document.getElementById('end-game');
     if(this.state.score == 9){
-      $('.win-lose').text('You Win')
+      this.setState({win: "win"})
+      this.setState({track: "audio/applause.wav"})
+      this.setState({actor: "brad"})
     } else {
-      $('.win-lose').text('You Lose')
+      this.setState({track: "audio/aww.mp3"})
     }
+    ReactDOM.render(<Overlay outcome={this.state.win} />, end)
   }
   render() {
         let squares = this.state.trivia.map(function(square){
@@ -54,10 +60,8 @@ class Game extends React.Component{
         <div className="game">
           <Timer endGame={ this.endGame } />
           { squares }
-        <audio autoPlay src={this.state.track}></audio>
-
-      </div>
-
+          <Sound track={this.state.track} />
+        </div>
     )
   }
 }

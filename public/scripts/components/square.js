@@ -8,7 +8,7 @@ class Square extends React.Component{
       question: this.props.question,
       answer: this.props.answer,
       imgUrl: this.props.imgUrl,
-      changed: false
+      background: ""
     };
     this.checkAnswer = this.checkAnswer.bind(this);
     this._updateScore = this._updateScore.bind(this);
@@ -18,15 +18,16 @@ class Square extends React.Component{
   }
   checkAnswer(e){
     if($(e.target).prev().val().toLowerCase() == this.props.children.answer.toLowerCase() ){
-      $(e.target).parent().empty().css({"background-image": "url(" + this.props.children.imgUrl + ")"})
+      this.setState({background: "url(" + this.props.children.imgUrl + ")"})
       this._updateScore()
     } else {
-      $(e.target).parent().empty().css({"background-image": "url('/img/x.png')"})
+      this.setState({background: "url('/img/x.png')"})
     }
+    $(e.target).parent().empty()
   }
   render() {
     return(
-      <div className="square">
+      <div className="square" style={ getBackground(this.state.background) }>
         <p>{ this.props.children.question }</p>
         <input className="answer-input" />
         <button className="btn answer-button" onClick={this.checkAnswer}>Answer</button>
@@ -35,5 +36,13 @@ class Square extends React.Component{
   }
 }
 
+function getBackground(image){
+  let style = {
+    background: {
+      backgroundImage: image
+    }
+  }
+  return style.background
+}
 
 export default Square;
